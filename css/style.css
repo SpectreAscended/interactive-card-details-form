@@ -25,7 +25,7 @@ html {
 }
 
 body {
-  font-family: 'Space Gtotesk', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-weight: 500;
 }
 
@@ -47,6 +47,7 @@ body {
   background-size: cover;
   /* background-color: orangered; */
   flex-basis: 40%;
+  position: relative;
 }
 
 .card {
@@ -55,11 +56,14 @@ body {
   border-radius: 0.5rem;
   background-size: cover;
   color: var(--color-white);
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.25);
 }
 
 .card-front {
   background-image: url(../images/bg-card-front.png);
-
+  position: absolute;
+  top: 23%;
+  right: -15%;
   padding: 1rem;
 }
 
@@ -67,7 +71,7 @@ body {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 .card-front__circle--big {
@@ -86,24 +90,42 @@ body {
   border-radius: 50%;
 }
 
+.card-front__number {
+  font-size: 1.45rem;
+  display: block;
+  letter-spacing: 4px;
+  margin-bottom: 1.5rem;
+}
+
 .card-front__details {
   display: flex;
   justify-content: space-between;
-}
-
-.card-front__number {
-  font-size: 1.5rem;
-  display: block;
-  text-align: center;
-  letter-spacing: 4px;
+  color: var(--color-light-grayish-violet);
+  font-size: 0.75rem;
 }
 
 .card-front__name {
   text-transform: uppercase;
-  font-size: 0.75rem;
+}
+
+.card-front__expiry {
+  margin-right: 1rem;
 }
 
 .card-back {
   background-image: url(../images/bg-card-back.png);
   margin-top: 5rem;
+  position: absolute;
+  top: 42%;
+  right: -30%;
+}
+
+.card-back__number {
+  color: var(--color-white);
+  position: absolute;
+  top: 50%;
+  right: 13%;
+
+  font-size: 0.75rem;
+  letter-spacing: 2px;
 }
